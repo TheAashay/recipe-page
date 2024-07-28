@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.image {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section:not(.image) {
+    padding: 2rem;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+.attribution {
+    font-size: 0.8rem;
+}
