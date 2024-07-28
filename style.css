@@ -1,3 +1,15 @@
+:root {
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 24%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 26%);
+
+    --rose-800: hsl(332, 51%, 22%);
+    --rose-50: hsl(330, 100%, 88%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,14 +26,156 @@ img {
     display: block;
 }
 
-section:not(.image) {
-    padding: 2rem;
+.title, .Nutrition {
+    padding: 1.5rem;
+    padding-bottom: 0;
 }
 
-ul, ol {
-    list-style-position: inside;
+/*  All list styling excluding color here*/
+ol, ul {
+    list-style-position: outside;
+    padding: 1rem;
 }
+
+ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin-left: -1rem;
+  }
+  
+ul li::before {
+    content: "\2022";
+    color: var(--brown-800);
+    font-size: 1rem; 
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+.prep-time li::before {
+    color: var(--rose-800);
+}
+
+ul li {
+    padding-bottom: 0.375rem;
+}
+
+ol li {
+    padding-bottom: 1rem;
+}
+
+li {
+    padding-left: 1rem;
+}
+
+
+
+/*  All list styling excluding color OVER  */
 
 .attribution {
     font-size: 0.8rem;
+}
+
+h1, h2:not(.prep-time-h2) {
+    font-family: 'Young serif', sans-serif;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+h2:not(.prep-time-h2) {
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+
+.prep-time-h2 {
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+p:not(.nutrient) {
+    padding: 1rem 0;
+}
+
+p, li {
+    font-size: 0.875rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Color styling of all the elements including <li> here*/
+.prep-time {
+    background-color: var(--rose-50);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.prep-time-h2 {
+    color: var(--rose-800);
+}
+
+h1 {
+    color: var(--stone-900);
+}
+
+h2:not(.prep-time-h2) {
+    color: var(--brown-800);
+}
+
+p, li {
+    color: var(--stone-600);
+    font-weight: 500;
+}
+
+ol li::marker {
+    color: var(--brown-800);
+}
+
+.Ingredients, .Instructions {
+    border-bottom: 0.125rem solid var(--stone-100);
+    margin: 0 1rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+}
+
+.nutrient {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.125rem solid var(--stone-100);
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+  
+.amount {
+    font-weight: bold;
+    margin-right: 25vw; 
+}
+
+.attribution {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+    .image {
+        padding: 1.5rem;
+    }
+
+    img {
+        border-radius: 0.5rem;
+    }
+
+    main {
+        background-color: #fff;
+        border-radius: 1rem;
+        max-width: 40rem;
+        margin: 5rem auto;
+    }
+
+    body {
+        background-color: hsl(29, 94%, 81%);
+    }
+
 }
